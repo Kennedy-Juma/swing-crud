@@ -5,6 +5,9 @@
  */
 package swing.crud.app;
 
+import java.sql.*;
+
+
 /**
  *
  * @author KENNEDY
@@ -43,7 +46,12 @@ public class UserHomePage extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("EMPLOYEE DETAILS");
+        jButton2.setText("VIEW EMPLOYEES");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("HOME PAGE");
@@ -97,6 +105,11 @@ public class UserHomePage extends javax.swing.JFrame {
         ChangePassword cp=new ChangePassword();
         cp.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    EmployeeDetails ed=new EmployeeDetails();
+    ed.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
